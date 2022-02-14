@@ -7,16 +7,23 @@ import {
   Route
 } from "react-router-dom";
 
+import { Provider } from 'react-redux'
+
 import HelloWorld from './HelloWorld'
+
+import configureStore from '../redux/configureStore'
+const store = configureStore();
 
 class App extends React.Component {
   render () {
     return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HelloWorld greeting="Friend" />} />
-        </Routes>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HelloWorld greeting="Friend" />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
