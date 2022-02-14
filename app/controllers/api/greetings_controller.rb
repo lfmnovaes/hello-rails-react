@@ -1,10 +1,10 @@
 class Api::GreetingsController < ApplicationController
   def index
-    render json: { :greetings => [
+    render json: { greetings: [
       {
-        :name => 'Hi',
-        :guid => '1234-5-6789'
+        id: '2',
+        message: 'asdasd'
       }
-    ]}.to_json
+    ] }.to_json
   end
 end

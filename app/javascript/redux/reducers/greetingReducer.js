@@ -1,18 +1,18 @@
 const GET_GREETINGS = 'greetings/GET';
 
-const initialState = {
-  greetings: [
-    {
-      id: "1",
-      name: "Hello World"
-    }
-  ]
-};
+const initialState = [];
+
+const tempDB = [
+  {
+    id: '1',
+    message: 'Hello world'
+  }
+];
 
 export const getGreetings = () => async (dispatch) => {
   dispatch({
     type: GET_GREETINGS,
-    payload: 'greetings test'
+    payload: tempDB,
   });
 };
 
@@ -23,6 +23,6 @@ const reducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
 export default reducer;
