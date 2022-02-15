@@ -32,10 +32,11 @@ react >= 17.0
 - In another terminal run `./bin/webpack-dev-server` to make webpack recompile after every modification
 
 <details>
-  <summary>Running linters</summary>
-  - Rubocop (Ruby code linter), run: `rubocop`
-  - Stylelint (CSS linter), run: `npx stylelint "**/*.{css,scss}"`
-  - ESLint (JS and JSX linter), run: `npx eslint .`
+   <summary>Running linters</summary>
+   
+   - Rubocop (Ruby code linter), run: `rubocop`
+   - Stylelint (CSS linter), run: `npx stylelint "**/*.{css,scss}"`
+   - ESLint (JS and JSX linter), run: `npx eslint .`
 </details>
 
 ## Author
