@@ -1,5 +1,5 @@
 const GET_GREETINGS = 'greetings/GET';
-const API_URL = 'http://127.0.0.1:3000/api/greetings';
+const API_URL = '/api/greetings';
 
 const initialState = [];
 
