@@ -1,19 +1,22 @@
 const GET_GREETINGS = 'greetings/GET';
+const API_URL = 'http://127.0.0.1:3000/api/greetings';
 
 const initialState = [];
 
-const tempDB = [
-  {
-    id: '1',
-    message: 'Hello world'
-  }
-];
+const getGreetings = (data) => ({
+  type: GET_GREETINGS,
+  payload: data,
+});
 
-export const getGreetings = () => async (dispatch) => {
-  dispatch({
-    type: GET_GREETINGS,
-    payload: tempDB,
-  });
+export const fetchGreetings = () => async (dispatch) => {
+  fetch(API_URL)
+    .then(async (response) => response.json())
+    .then((data) => {
+      dispatch(getGreetings(data));
+    })
+    .catch((error) => {
+      console.error('There was an error!', error);
+    });
 };
 
 const reducer = (state = initialState, action) => {
